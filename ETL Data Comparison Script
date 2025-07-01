@@ -1,0 +1,11 @@
+import pandas as pd
+
+src = pd.read_csv("source_data.csv")
+tgt = pd.read_csv("target_data.csv")
+
+diff = src.compare(tgt)
+if diff.empty:
+    print("Source and Target match ✅")
+else:
+    print("Data Mismatch found ⚠️")
+    print(diff)

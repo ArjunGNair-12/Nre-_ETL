@@ -1,0 +1,6 @@
+-- Check for row count match
+SELECT COUNT(*) FROM source_table;
+SELECT COUNT(*) FROM target_table;
+
+-- Check for NULLs in critical columns
+SELECT * FROM target_table WHERE important_column IS NULL;
